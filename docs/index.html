@@ -2,34 +2,38 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <title>Recursos Android & Kotlin · OpenWebinars Style</title>
+    <title>Recursos Android & Kotlin · OpenWebinars</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
         :root {
-            --ow-primary: #00b5d8;
-            --ow-primary-dark: #008fb1;
+            --ow-primary: #6a1bb8;
+            --ow-primary-light: #d44bf2;
+            --ow-primary-dark: #4b1190;
+            --ow-accent: #ff71e4;
             --ow-bg: #f3f4f6;
-            --ow-text: #0f172a;
+            --ow-text: #111827;
             --ow-muted: #6b7280;
             --ow-card: #ffffff;
             --ow-card-border: #e5e7eb;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
             background: var(--ow-bg);
             color: var(--ow-text);
         }
 
-        /* HERO SUPERIOR */
+        /* HERO CON LOGO */
         header {
-            background: linear-gradient(135deg, var(--ow-primary), var(--ow-primary-dark));
-            padding: 3rem 1.5rem;
+            background: linear-gradient(135deg,
+                var(--ow-primary-dark),
+                var(--ow-primary),
+                var(--ow-primary-light)
+            );
+            padding: 3rem 1.5rem 4rem;
             color: white;
         }
 
@@ -38,8 +42,27 @@
             margin: 0 auto;
         }
 
+        /* LOGO */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo svg {
+            height: 40px;
+            width: 40px;
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
         .hero-title {
-            font-size: clamp(2rem, 4vw, 2.6rem);
+            font-size: clamp(2rem, 4vw, 2.7rem);
             margin: 0 0 0.5rem;
             font-weight: 700;
         }
@@ -48,13 +71,13 @@
             margin: 0;
             font-size: 1rem;
             opacity: 0.95;
-            max-width: 640px;
+            max-width: 650px;
         }
 
-        /* CONTENEDOR PRINCIPAL */
+        /* CONTENIDO PRINCIPAL */
         .layout {
             max-width: 960px;
-            margin: -2rem auto 3rem;
+            margin: -2.5rem auto 3rem;
             padding: 0 1.5rem;
         }
 
@@ -126,14 +149,15 @@
         }
 
         .card-link a:hover {
+            color: var(--ow-primary-light);
             text-decoration: underline;
         }
 
-        /* PÍLDORA */
+        /* PILLS */
         .pill {
             display: inline-block;
-            background: #e0faff;
-            color: #026c82;
+            background: #f8e3ff;
+            color: var(--ow-primary-dark);
             padding: 0.15rem 0.55rem;
             border-radius: 999px;
             font-size: 0.7rem;
@@ -142,7 +166,6 @@
             letter-spacing: 0.04em;
         }
 
-        /* FOOTER */
         footer {
             text-align: center;
             margin-top: 2rem;
@@ -155,10 +178,19 @@
 
 <header>
     <div class="hero-inner">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <svg viewBox="0 0 24 24">
+                <path fill="#ffffff" d="M12 2L2 7v10l10 5 10-5V7z"/>
+            </svg>
+            <span class="logo-text">OpenWebinars</span>
+        </div>
+
         <h1 class="hero-title">Recursos Android & Kotlin</h1>
         <p class="hero-subtitle">
-            Documentación oficial, herramientas y referencias recomendadas para el módulo:
-            <strong>Definición de arquitectura en Android</strong>.
+            Documentación oficial y enlaces recomendados para el curso
+            <strong>Definición de arquitectura en Android con Jetpack Compose</strong>.
         </p>
     </div>
 </header>
@@ -167,9 +199,9 @@
 
     <section class="main-card">
 
-        <!-- BLOQUE REPOSITORIO -->
+        <!-- REPOSITORIO -->
         <h2 class="section-title">Repositorio del proyecto</h2>
-        <p class="section-sub">Acceso directo al código utilizado en el curso.</p>
+        <p class="section-sub">Acceso directo al código usado en el curso.</p>
 
         <div class="grid">
             <div class="card">
@@ -185,89 +217,129 @@
             </div>
         </div>
 
-        <!-- BLOQUE DOCUMENTACIÓN -->
-        <h2 class="section-title" style="margin-top:2rem;">Documentación oficial recomendada</h2>
-        <p class="section-sub">Recursos utilizados para reforzar los conceptos del curso.</p>
+        <!-- DOCUMENTACIÓN -->
+        <h2 class="section-title" style="margin-top:2rem;">Documentación recomendada</h2>
+        <p class="section-sub">Recursos que complementan los contenidos del curso.</p>
 
         <div class="grid grid-2">
 
             <div class="card">
                 <p class="pill">Productividad</p>
                 <p class="card-title">Atajos de teclado Android Studio</p>
-                <p class="card-desc">Guía rápida para trabajar más rápido en Android Studio.</p>
-                <p class="card-link"><a href="https://developer.android.com/studio/intro/keyboard-shortcuts?hl=es-419" target="_blank">developer.android.com/.../keyboard-shortcuts</a></p>
+                <p class="card-desc">Guía rápida para trabajar más rápido.</p>
+                <p class="card-link">
+                    <a href="https://developer.android.com/studio/intro/keyboard-shortcuts?hl=es-419" target="_blank">
+                        developer.android.com/.../keyboard-shortcuts
+                    </a>
+                </p>
             </div>
 
             <div class="card">
                 <p class="pill">Arquitectura</p>
-                <p class="card-title">Guía de arquitectura de apps</p>
-                <p class="card-desc">Buenas prácticas y estructura recomendada por Google.</p>
-                <p class="card-link"><a href="https://developer.android.com/topic/architecture?hl=es-419" target="_blank">developer.android.com/topic/architecture</a></p>
+                <p class="card-title">Guía de arquitectura</p>
+                <p class="card-desc">Patrones y estructura oficial recomendada.</p>
+                <p class="card-link">
+                    <a href="https://developer.android.com/topic/architecture?hl=es-419" target="_blank">
+                        developer.android.com/topic/architecture
+                    </a>
+                </p>
             </div>
 
             <div class="card">
-                <p class="pill">DI · Compose</p>
+                <p class="pill">DI</p>
                 <p class="card-title">Koin con Jetpack Compose</p>
-                <p class="card-desc">Cómo usar Koin para inyección de dependencias en Compose.</p>
-                <p class="card-link"><a href="https://insert-koin.io/docs/quickstart/android-compose" target="_blank">insert-koin.io/.../android-compose</a></p>
+                <p class="card-desc">Inyección de dependencias en Compose.</p>
+                <p class="card-link">
+                    <a href="https://insert-koin.io/docs/quickstart/android-compose" target="_blank">
+                        insert-koin.io/.../android-compose
+                    </a>
+                </p>
             </div>
 
             <div class="card">
                 <p class="pill">Flow Android</p>
                 <p class="card-title">Kotlin Flow (Android)</p>
-                <p class="card-desc">Gestión de datos asíncronos con Flow en Android.</p>
-                <p class="card-link"><a href="https://developer.android.com/kotlin/flow?hl=es-419" target="_blank">developer.android.com/kotlin/flow</a></p>
+                <p class="card-desc">Flujos asíncronos en apps Android.</p>
+                <p class="card-link">
+                    <a href="https://developer.android.com/kotlin/flow?hl=es-419" target="_blank">
+                        developer.android.com/kotlin/flow
+                    </a>
+                </p>
             </div>
 
             <div class="card">
                 <p class="pill">Kotlin</p>
-                <p class="card-title">Kotlin Flow (core)</p>
-                <p class="card-desc">Referencia de Flow sin dependencias Android.</p>
-                <p class="card-link"><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/" target="_blank">kotlinlang.org/.../flow</a></p>
+                <p class="card-title">Flow core</p>
+                <p class="card-desc">API Flow sin dependencias Android.</p>
+                <p class="card-link">
+                    <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/" target="_blank">
+                        kotlinlang.org/.../flow
+                    </a>
+                </p>
             </div>
 
             <div class="card">
                 <p class="pill">Firebase</p>
-                <p class="card-title">Agregar Firebase a Android</p>
-                <p class="card-desc">Configuración de Firebase paso a paso.</p>
-                <p class="card-link"><a href="https://firebase.google.com/docs/android/setup?hl=es" target="_blank">firebase.google.com/.../setup</a></p>
+                <p class="card-title">Firebase setup</p>
+                <p class="card-desc">Cómo integrar Firebase en tu proyecto.</p>
+                <p class="card-link">
+                    <a href="https://firebase.google.com/docs/android/setup?hl=es" target="_blank">
+                        firebase.google.com/.../setup
+                    </a>
+                </p>
             </div>
 
             <div class="card">
                 <p class="pill">Firebase</p>
                 <p class="card-title">Firestore</p>
-                <p class="card-desc">Consultas, colecciones y documentación completa.</p>
-                <p class="card-link"><a href="https://firebase.google.com/docs/firestore?hl=es" target="_blank">firebase.google.com/docs/firestore</a></p>
+                <p class="card-desc">Consultas, colecciones y ejemplos.</p>
+                <p class="card-link">
+                    <a href="https://firebase.google.com/docs/firestore?hl=es" target="_blank">
+                        firebase.google.com/docs/firestore
+                    </a>
+                </p>
             </div>
 
             <div class="card">
                 <p class="pill">Persistencia</p>
                 <p class="card-title">Room</p>
-                <p class="card-desc">Uso de Room para persistencia en Android.</p>
-                <p class="card-link"><a href="https://developer.android.com/training/data-storage/room?hl=es-419" target="_blank">developer.android.com/.../room</a></p>
+                <p class="card-desc">Persistencia local con Room.</p>
+                <p class="card-link">
+                    <a href="https://developer.android.com/training/data-storage/room?hl=es-419" target="_blank">
+                        developer.android.com/.../room
+                    </a>
+                </p>
             </div>
 
             <div class="card">
                 <p class="pill">UI</p>
                 <p class="card-title">Jetpack Compose</p>
-                <p class="card-desc">La guía oficial para construir UI declarativa.</p>
-                <p class="card-link"><a href="https://developer.android.com/compose" target="_blank">developer.android.com/compose</a></p>
+                <p class="card-desc">UI moderna y declarativa.</p>
+                <p class="card-link">
+                    <a href="https://developer.android.com/compose" target="_blank">
+                        developer.android.com/compose
+                    </a>
+                </p>
             </div>
 
             <div class="card">
                 <p class="pill">Kotlin</p>
-                <p class="card-title">Documentación oficial Kotlin</p>
-                <p class="card-desc">Lenguaje, corutinas y mejores prácticas.</p>
-                <p class="card-link"><a href="https://kotlinlang.org/docs/home.html" target="_blank">kotlinlang.org/docs/home.html</a></p>
+                <p class="card-title">Kotlin Docs</p>
+                <p class="card-desc">Guía y documentación oficial.</p>
+                <p class="card-link">
+                    <a href="https://kotlinlang.org/docs/home.html" target="_blank">
+                        kotlinlang.org/docs/home.html
+                    </a>
+                </p>
             </div>
 
         </div>
 
         <footer>
-            Página generada como recurso adicional para el curso en OpenWebinars.
+            Recursos complementarios para el curso de OpenWebinars.
         </footer>
-
     </section>
+
 </main>
 
 </body>
