@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">EventBooking</string>
+
+    <!-- region A11Y -->
+    <string name="a11y_label__full_capacity">Aforo completo</string>
+    <string name="a11y_label__back">Atrás</string>
+    <string name="a11y_label__enabled">Reducir asistente</string>
+    <string name="a11y_label__disabled">Reducir asistente</string>
+    <string name="a11y_label__decrease_assistant">Reducir asistente</string>
+    <string name="a11y_label__increase_assistant">Incrementar asistente</string>
+    <string name="a11y_label__need_sync_btn">Sincronizar</string>
+
+    <plurals name="a11y_label__assistant">
+        <item quantity="one">%d asistente</item>
+        <item quantity="other">%d asistentes</item>
+    </plurals>
+    <!-- endregion -->
+
+    <!-- region Create booking -->
+    <string name="create_booking_title">Crear reserva</string>
+    <string name="create_booking_empty_author">El nombre no puede ser vacío</string>
+    <string name="create_booking_create_booking_error">Algo ha ido mal creando la reserva</string>
+    <string name="create_booking_owner_name_hint">Nombre para la reserva</string>
+    <string name="create_booking_accept">Reservar</string>
+    <!-- endregion -->
+
+    <!-- region Booking list -->
+    <string name="booking_list_title">Listado de reservas</string>
+    <string name="booking_list_cancel_booking_error">Error al cancelar una reserva</string>
+    <string name="booking_list_load_bookings_error">No se pudieron cargar las reservas</string>
+    <string name="booking_list_sync_booking_error">No se ha podido sincronizar las reservas</string>
+    <string name="booking_list_owner_name">Reserva de %1$s</string>
+    <string name="booking_list_assistants">Asistentes %1$s</string>
+    <string name="booking_list_cancel">Anular</string>
+    <string name="booking_list_sync">Sincronizar</string>
+    <string name="booking_list_empty_bookings">Aún no hay reservas</string>
+    <!-- endregion -->
+
+    <!-- region Event list -->
+    <string name="event_list_booking">Reservar</string>
+    <string name="event_list_bookings">Reservas</string>
+    <string name="event_list_capacity">Aforo %1$d/%2$d</string>
+    <string name="event_list_load_events_error">Error cargando el listado de eventos</string>
+    <string name="event_list_sync_data_error">Error sincronizando reservas pendientes</string>
+    <string name="event_list_location_modal_title">Permiso de ubicación</string>
+    <string name="event_list_location_modal_description">Es necesario el permiso de ubicación para que podamos ordenar el listado de eventos, si no, el listado aparecerá de forma aleatoria.</string>
+    <string name="event_list_location_modal_accept">Aceptar</string>
+    <string name="event_list_location_modal_reject">Rechazar</string>
+    <!-- endregion -->
+</resources>
