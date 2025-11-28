@@ -2,17 +2,17 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <title>Recursos Android & Kotlin</title>
+    <title>Recursos Android & Kotlin · OpenWebinars Style</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
         :root {
-            --color-primary: #00b4a0;
-            --color-primary-dark: #008c7b;
-            --color-bg: #f3f4f6;
-            --color-text: #111827;
-            --color-muted: #6b7280;
-            --card-bg: #ffffff;
-            --card-border: #e5e7eb;
+            --ow-primary: #00b5d8;
+            --ow-primary-dark: #008fb1;
+            --ow-bg: #f3f4f6;
+            --ow-text: #0f172a;
+            --ow-muted: #6b7280;
+            --ow-card: #ffffff;
+            --ow-card-border: #e5e7eb;
         }
 
         * {
@@ -22,125 +22,67 @@
         body {
             margin: 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: var(--color-bg);
-            color: var(--color-text);
+            background: var(--ow-bg);
+            color: var(--ow-text);
         }
 
-        .hero {
-            background: radial-gradient(circle at top left, #22d3ee 0, #0369a1 45%, #020617 100%);
-            color: #f9fafb;
-            padding: 2.5rem 1.5rem 4rem;
+        /* HERO SUPERIOR */
+        header {
+            background: linear-gradient(135deg, var(--ow-primary), var(--ow-primary-dark));
+            padding: 3rem 1.5rem;
+            color: white;
         }
 
         .hero-inner {
             max-width: 960px;
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 999px;
-            padding: 0.25rem 0.9rem;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
-        .hero-badge-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 999px;
-            background: #22c55e;
         }
 
         .hero-title {
-            font-size: clamp(1.9rem, 4vw, 2.4rem);
+            font-size: clamp(2rem, 4vw, 2.6rem);
+            margin: 0 0 0.5rem;
             font-weight: 700;
-            margin: 0;
         }
 
         .hero-subtitle {
             margin: 0;
+            font-size: 1rem;
+            opacity: 0.95;
             max-width: 640px;
-            font-size: 0.98rem;
-            color: #e5e7eb;
         }
 
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 0.5rem;
-        }
-
-        .btn-primary {
-            background: var(--color-primary);
-            color: white;
-            border-radius: 999px;
-            padding: 0.65rem 1.4rem;
-            border: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: default;
-            box-shadow: 0 10px 30px rgba(0, 180, 160, 0.35);
-        }
-
-        .btn-ghost {
-            border-radius: 999px;
-            padding: 0.65rem 1.3rem;
-            border: 1px solid rgba(148, 163, 184, 0.5);
-            background: transparent;
-            color: #e5e7eb;
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: default;
-        }
-
+        /* CONTENEDOR PRINCIPAL */
         .layout {
             max-width: 960px;
-            margin: -2.5rem auto 3rem;
-            padding: 0 1.5rem 0.5rem;
+            margin: -2rem auto 3rem;
+            padding: 0 1.5rem;
         }
 
         .main-card {
-            background: #ffffff;
+            background: var(--ow-card);
             border-radius: 1rem;
-            padding: 1.5rem 1.5rem 1.75rem;
-            box-shadow:
-                0 18px 40px rgba(15, 23, 42, 0.18),
-                0 0 0 1px rgba(15, 23, 42, 0.04);
-        }
-
-        .section-header {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
+            padding: 1.6rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border: 1px solid var(--ow-card-border);
         }
 
         .section-title {
-            font-size: 1.05rem;
+            margin: 0 0 0.25rem;
+            font-size: 1.25rem;
             font-weight: 600;
-            margin: 0;
         }
 
         .section-sub {
-            font-size: 0.85rem;
-            color: var(--color-muted);
-            margin: 0;
+            margin: 0 0 1rem;
+            color: var(--ow-muted);
+            font-size: 0.9rem;
         }
 
+        /* GRID */
         .grid {
             display: grid;
             grid-template-columns: minmax(0, 1fr);
-            gap: 0.85rem;
+            gap: 1rem;
         }
 
         @media (min-width: 640px) {
@@ -149,282 +91,184 @@
             }
         }
 
+        /* TARJETAS */
         .card {
-            background: var(--card-bg);
+            background: var(--ow-card);
             border-radius: 0.85rem;
-            padding: 0.9rem 1rem;
-            border: 1px solid var(--card-border);
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-            transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+            padding: 1rem 1.15rem;
+            border: 1px solid var(--ow-card-border);
+            transition: 0.2s ease;
         }
 
         .card:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
-            border-color: rgba(148, 163, 184, 0.8);
-        }
-
-        .card-pill {
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: .06em;
-            color: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border-color: var(--ow-primary);
         }
 
         .card-title {
-            font-weight: 600;
-            font-size: 0.92rem;
             margin: 0;
+            font-weight: 600;
+            font-size: 1rem;
         }
 
         .card-desc {
-            font-size: 0.8rem;
-            color: var(--color-muted);
-            margin: 0;
-        }
-
-        .card-link {
-            margin-top: 0.25rem;
-            font-size: 0.8rem;
+            margin: 0.25rem 0 0.5rem;
+            font-size: 0.85rem;
+            color: var(--ow-muted);
         }
 
         .card-link a {
-            color: var(--color-primary-dark);
+            color: var(--ow-primary-dark);
             text-decoration: none;
             word-break: break-all;
+            font-size: 0.85rem;
         }
 
         .card-link a:hover {
             text-decoration: underline;
         }
 
-        .tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            background: #ecfeff;
-            color: #155e75;
-            padding: 0.15rem 0.5rem;
+        /* PÍLDORA */
+        .pill {
+            display: inline-block;
+            background: #e0faff;
+            color: #026c82;
+            padding: 0.15rem 0.55rem;
             border-radius: 999px;
             font-size: 0.7rem;
-            font-weight: 500;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
         }
 
-        .tag-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: #06b6d4;
-        }
-
-        .footer {
+        /* FOOTER */
+        footer {
             text-align: center;
-            font-size: 0.75rem;
-            color: #9ca3af;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: var(--ow-muted);
         }
     </style>
 </head>
 <body>
-    <!-- HERO SUPERIOR -->
-    <header class="hero">
-        <div class="hero-inner">
-            <div class="hero-badge">
-                <span class="hero-badge-dot"></span>
-                Recursos complementarios · Android & Kotlin
-            </div>
-            <div>
-                <h1 class="hero-title">Definición de arquitectura en Android</h1>
-                <p class="hero-subtitle">
-                    Selección de enlaces oficiales y documentación de apoyo
-                    para la capa de datos, dominio y presentación con Jetpack Compose.
+
+<header>
+    <div class="hero-inner">
+        <h1 class="hero-title">Recursos Android & Kotlin</h1>
+        <p class="hero-subtitle">
+            Documentación oficial, herramientas y referencias recomendadas para el módulo:
+            <strong>Definición de arquitectura en Android</strong>.
+        </p>
+    </div>
+</header>
+
+<main class="layout">
+
+    <section class="main-card">
+
+        <!-- BLOQUE REPOSITORIO -->
+        <h2 class="section-title">Repositorio del proyecto</h2>
+        <p class="section-sub">Acceso directo al código utilizado en el curso.</p>
+
+        <div class="grid">
+            <div class="card">
+                <p class="pill">Proyecto</p>
+                <p class="card-title">Carpeta /EventBooking</p>
+                <p class="card-desc">Archivos completos del módulo dentro del repositorio oficial.</p>
+                <p class="card-link">
+                    <a href="https://github.com/OpenWebinarsNet/Definici-n-de-arquitectura-en-Android-Capa-de-datos-dominio-y-presentaci-n-con-Jetpack-Compose/tree/main/EventBooking"
+                       target="_blank">
+                        Ver carpeta en GitHub →
+                    </a>
                 </p>
-            </div>
-            <div class="hero-actions">
-                <button class="btn-primary">
-                    📚 Recursos del módulo
-                </button>
-                <button class="btn-ghost">
-                    Basado en documentación oficial
-                </button>
             </div>
         </div>
-    </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="layout">
-        <section class="main-card">
-            <!-- Bloque repositorio -->
-            <div class="section-header">
-                <h2 class="section-title">Repositorio del proyecto</h2>
-                <p class="section-sub">
-                    Código de ejemplo utilizado en la sesión.
-                </p>
+        <!-- BLOQUE DOCUMENTACIÓN -->
+        <h2 class="section-title" style="margin-top:2rem;">Documentación oficial recomendada</h2>
+        <p class="section-sub">Recursos utilizados para reforzar los conceptos del curso.</p>
+
+        <div class="grid grid-2">
+
+            <div class="card">
+                <p class="pill">Productividad</p>
+                <p class="card-title">Atajos de teclado Android Studio</p>
+                <p class="card-desc">Guía rápida para trabajar más rápido en Android Studio.</p>
+                <p class="card-link"><a href="https://developer.android.com/studio/intro/keyboard-shortcuts?hl=es-419" target="_blank">developer.android.com/.../keyboard-shortcuts</a></p>
             </div>
 
-            <div class="grid">
-                <article class="card">
-                    <span class="card-pill">Proyecto</span>
-                    <h3 class="card-title">Carpeta <code>/EventBooking</code> en GitHub</h3>
-                    <p class="card-desc">
-                        Accede directamente a los archivos del repositorio utilizados en el curso.
-                    </p>
-                    <p class="card-link">
-                        <a href="https://github.com/OpenWebinarsNet/Definici-n-de-arquitectura-en-Android-Capa-de-datos-dominio-y-presentaci-n-con-Jetpack-Compose/tree/main/EventBooking"
-                           target="_blank" rel="noopener noreferrer">
-                            Ver carpeta /EventBooking en GitHub
-                        </a>
-                    </p>
-                </article>
+            <div class="card">
+                <p class="pill">Arquitectura</p>
+                <p class="card-title">Guía de arquitectura de apps</p>
+                <p class="card-desc">Buenas prácticas y estructura recomendada por Google.</p>
+                <p class="card-link"><a href="https://developer.android.com/topic/architecture?hl=es-419" target="_blank">developer.android.com/topic/architecture</a></p>
             </div>
 
-            <!-- Bloque documentación -->
-            <div style="margin-top: 1.8rem;" class="section-header">
-                <h2 class="section-title">Documentación recomendada</h2>
-                <p class="section-sub">
-                    Enlaces oficiales para profundizar en los conceptos vistos en el curso.
-                </p>
+            <div class="card">
+                <p class="pill">DI · Compose</p>
+                <p class="card-title">Koin con Jetpack Compose</p>
+                <p class="card-desc">Cómo usar Koin para inyección de dependencias en Compose.</p>
+                <p class="card-link"><a href="https://insert-koin.io/docs/quickstart/android-compose" target="_blank">insert-koin.io/.../android-compose</a></p>
             </div>
 
-            <div class="grid grid-2">
-                <article class="card">
-                    <span class="tag"><span class="tag-dot"></span>Productividad</span>
-                    <h3 class="card-title">Atajos de teclado Android Studio</h3>
-                    <p class="card-desc">
-                        Lista de combinaciones para acelerar tu flujo de trabajo en Android Studio.
-                    </p>
-                    <p class="card-link">
-                        <a href="https://developer.android.com/studio/intro/keyboard-shortcuts?hl=es-419" target="_blank" rel="noopener noreferrer">
-                            developer.android.com/studio/intro/keyboard-shortcuts
-                        </a>
-                    </p>
-                </article>
-
-                <article class="card">
-                    <span class="tag"><span class="tag-dot"></span>Arquitectura</span>
-                    <h3 class="card-title">Guía de arquitectura de apps</h3>
-                    <p class="card-desc">
-                        Recomendaciones oficiales de Google para estructurar apps Android escalables.
-                    </p>
-                    <p class="card-link">
-                        <a href="https://developer.android.com/topic/architecture?hl=es-419" target="_blank" rel="noopener noreferrer">
-                            developer.android.com/topic/architecture
-                        </a>
-                    </p>
-                </article>
-
-                <article class="card">
-                    <span class="tag"><span class="tag-dot"></span>DI · Compose</span>
-                    <h3 class="card-title">Koin con Jetpack Compose</h3>
-                    <p class="card-desc">
-                        Guía rápida para integrar Koin como contenedor de inyección de dependencias en Compose.
-                    </p>
-                    <p class="card-link">
-                        <a href="https://insert-koin.io/docs/quickstart/android-compose" target="_blank" rel="noopener noreferrer">
-                            insert-koin.io/docs/quickstart/android-compose
-                        </a>
-                    </p>
-                </article>
-
-                <article class="card">
-                    <span class="tag"><span class="tag-dot"></span>Flujos Reactivos</span>
-                    <h3 class="card-title">Flow en Kotlin (Android)</h3>
-                    <p class="card-desc">
-                        Uso de Kotlin Flow en aplicaciones Android para manejar flujos de datos asíncronos.
-                    </p>
-                    <p class="card-link">
-                        <a href="https://developer.android.com/kotlin/flow?hl=es-419" target="_blank" rel="noopener noreferrer">
-                            developer.android.com/kotlin/flow
-                        </a>
-                    </p>
-                </article>
-
-                <article class="card">
-                    <span class="tag"><span class="tag-dot"></span>Kotlin</span>
-                    <h3 class="card-title">Flow en Kotlin (core)</h3>
-                    <p class="card-desc">
-                        Referencia de la API de Flow en la librería de corutinas, sin dependencias de Android.
-                    </p>
-                    <p class="card-link">
-                        <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/" target="_blank" rel="noopener noreferrer">
-                            kotlinlang.org/api/kotlinx.coroutines/…/flow/-flow/
-                        </a>
-                    </p>
-                </article>
-
-                <article class="card">
-                    <span class="tag"><span class="tag-dot"></span>Firebase</span>
-                    <h3 class="card-title">Agregar Firebase a un proyecto Android</h3>
-                    <p class="card-desc">
-                        Pasos para registrar la app, añadir el SDK y configurar Firebase en Android.
-                    </p>
-                    <p class="card-link">
-                        <a href="https://firebase.google.com/docs/android/setup?hl=es" target="_blank" rel="noopener noreferrer">
-                            firebase.google.com/docs/android/setup
-                        </a>
-                    </p>
-                </article>
-
-                <article class="card">
-                    <span class="tag"><span class="tag-dot"></span>Firebase</span>
-                    <h3 class="card-title">Firebase Firestore</h3>
-                    <p class="card-desc">
-                        Documentación oficial de Cloud Firestore: modelo de datos, consultas y buenas prácticas.
-                    </p>
-                    <p class="card-link">
-                        <a href="https://firebase.google.com/docs/firestore?hl=es" target="_blank" rel="noopener noreferrer">
-                            firebase.google.com/docs/firestore
-                        </a>
-                    </p>
-                </article>
-
-                <article class="card">
-                    <span class="tag"><span class="tag-dot"></span>Persistencia</span>
-                    <h3 class="card-title">Room · Persistencia en Android</h3>
-                    <p class="card-desc">
-                        Capa de datos con Room: entidades, DAOs y base de datos para acceso a SQLite.
-                    </p>
-                    <p class="card-link">
-                        <a href="https://developer.android.com/training/data-storage/room?hl=es-419" target="_blank" rel="noopener noreferrer">
-                            developer.android.com/training/data-storage/room
-                        </a>
-                    </p>
-                </article>
-
-                <article class="card">
-                    <span class="tag"><span class="tag-dot"></span>UI</span>
-                    <h3 class="card-title">Documentación oficial Jetpack Compose</h3>
-                    <p class="card-desc">
-                        Guías, ejemplos y referencias para construir interfaces declarativas con Compose.
-                    </p>
-                    <p class="card-link">
-                        <a href="https://developer.android.com/compose" target="_blank" rel="noopener noreferrer">
-                            developer.android.com/compose
-                        </a>
-                    </p>
-                </article>
-
-                <article class="card">
-                    <span class="tag"><span class="tag-dot"></span>Kotlin</span>
-                    <h3 class="card-title">Documentación oficial Kotlin</h3>
-                    <p class="card-desc">
-                        Punto de entrada a la documentación del lenguaje, corutinas y buenas prácticas.
-                    </p>
-                    <p class="card-link">
-                        <a href="https://kotlinlang.org/docs/home.html" target="_blank" rel="noopener noreferrer">
-                            kotlinlang.org/docs/home.html
-                        </a>
-                    </p>
-                </article>
+            <div class="card">
+                <p class="pill">Flow Android</p>
+                <p class="card-title">Kotlin Flow (Android)</p>
+                <p class="card-desc">Gestión de datos asíncronos con Flow en Android.</p>
+                <p class="card-link"><a href="https://developer.android.com/kotlin/flow?hl=es-419" target="_blank">developer.android.com/kotlin/flow</a></p>
             </div>
 
-            <p class="footer">
-                Esta página es un recurso auxiliar para el curso de arquitectura en Android con Jetpack Compose.
-            </p>
-        </section>
-    </main>
+            <div class="card">
+                <p class="pill">Kotlin</p>
+                <p class="card-title">Kotlin Flow (core)</p>
+                <p class="card-desc">Referencia de Flow sin dependencias Android.</p>
+                <p class="card-link"><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/" target="_blank">kotlinlang.org/.../flow</a></p>
+            </div>
+
+            <div class="card">
+                <p class="pill">Firebase</p>
+                <p class="card-title">Agregar Firebase a Android</p>
+                <p class="card-desc">Configuración de Firebase paso a paso.</p>
+                <p class="card-link"><a href="https://firebase.google.com/docs/android/setup?hl=es" target="_blank">firebase.google.com/.../setup</a></p>
+            </div>
+
+            <div class="card">
+                <p class="pill">Firebase</p>
+                <p class="card-title">Firestore</p>
+                <p class="card-desc">Consultas, colecciones y documentación completa.</p>
+                <p class="card-link"><a href="https://firebase.google.com/docs/firestore?hl=es" target="_blank">firebase.google.com/docs/firestore</a></p>
+            </div>
+
+            <div class="card">
+                <p class="pill">Persistencia</p>
+                <p class="card-title">Room</p>
+                <p class="card-desc">Uso de Room para persistencia en Android.</p>
+                <p class="card-link"><a href="https://developer.android.com/training/data-storage/room?hl=es-419" target="_blank">developer.android.com/.../room</a></p>
+            </div>
+
+            <div class="card">
+                <p class="pill">UI</p>
+                <p class="card-title">Jetpack Compose</p>
+                <p class="card-desc">La guía oficial para construir UI declarativa.</p>
+                <p class="card-link"><a href="https://developer.android.com/compose" target="_blank">developer.android.com/compose</a></p>
+            </div>
+
+            <div class="card">
+                <p class="pill">Kotlin</p>
+                <p class="card-title">Documentación oficial Kotlin</p>
+                <p class="card-desc">Lenguaje, corutinas y mejores prácticas.</p>
+                <p class="card-link"><a href="https://kotlinlang.org/docs/home.html" target="_blank">kotlinlang.org/docs/home.html</a></p>
+            </div>
+
+        </div>
+
+        <footer>
+            Página generada como recurso adicional para el curso en OpenWebinars.
+        </footer>
+
+    </section>
+</main>
+
 </body>
 </html>
