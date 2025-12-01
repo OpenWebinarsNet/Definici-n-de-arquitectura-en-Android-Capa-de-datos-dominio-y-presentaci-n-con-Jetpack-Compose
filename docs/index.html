@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
         :root {
-            /* Paleta basada en el logo que enviaste */
+            /* Paleta basada en el logo real */
             --ow-purple-dark: #E72590;   /* morado oscuro */
             --ow-magenta:     #AC4595;   /* magenta principal */
             --ow-rose-soft:   #EFE6EE;   /* fondo claro rosado */
@@ -45,10 +45,10 @@
             margin-bottom: 1.5rem;
         }
 
-        .logo svg {
+        .logo-img {
             height: 44px;
             width: 44px;
-            flex-shrink: 0;
+            object-fit: contain;
         }
 
         .logo-text {
@@ -105,9 +105,7 @@
         }
 
         @media (min-width: 640px) {
-            .grid-2 {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
+            .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
 
         /* TARJETAS */
@@ -149,7 +147,7 @@
             text-decoration: underline;
         }
 
-        /* PILLS / ETIQUETAS */
+        /* PILLS */
         .pill {
             display: inline-block;
             background: rgba(172,69,149,0.12);
@@ -176,32 +174,9 @@
 <header>
     <div class="hero-inner">
 
-        <!-- LOGO ESTILO OPENWEBINARS (CÍRCULO + W) -->
+        <!-- LOGO REAL -->
         <div class="logo">
-            <svg viewBox="0 0 64 64" aria-hidden="true">
-                <!-- círculo exterior con hueco inferior aproximado -->
-                <path
-                    d="M20,50
-                       A20,20 0 1,1 44,50"
-                    fill="none"
-                    stroke="#ffffff"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                />
-                <!-- W central -->
-                <path
-                    d="M20 28
-                       L25 40
-                       L32 30
-                       L39 40
-                       L44 28"
-                    fill="none"
-                    stroke="#ffffff"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                />
-            </svg>
+            <img src="assets/logOW-white.png" alt="OpenWebinars Logo" class="logo-img">
             <span class="logo-text">OpenWebinars</span>
         </div>
 
@@ -228,8 +203,7 @@
                     Archivos completos del módulo dentro del repositorio oficial de OpenWebinars.
                 </p>
                 <p class="card-link">
-                    <a href="https://github.com/OpenWebinarsNet/Definici-n-de-arquitectura-en-Android-Capa-de-datos-dominio-y-presentaci-n-con-Jetpack-Compose/tree/main/EventBooking"
-                       target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/OpenWebinarsNet/Definici-n-de-arquitectura-en-Android-Capa-de-datos-dominio-y-presentaci-n-con-Jetpack-Compose/tree/main/EventBooking" target="_blank">
                         Ver carpeta en GitHub →
                     </a>
                 </p>
@@ -247,7 +221,7 @@
                 <p class="card-title">Atajos de teclado Android Studio</p>
                 <p class="card-desc">Guía rápida para trabajar más rápido con el IDE.</p>
                 <p class="card-link">
-                    <a href="https://developer.android.com/studio/intro/keyboard-shortcuts?hl=es-419" target="_blank" rel="noopener noreferrer">
+                    <a href="https://developer.android.com/studio/intro/keyboard-shortcuts?hl=es-419" target="_blank">
                         developer.android.com/.../keyboard-shortcuts
                     </a>
                 </p>
@@ -256,9 +230,9 @@
             <div class="card">
                 <p class="pill">Arquitectura</p>
                 <p class="card-title">Guía de arquitectura de apps</p>
-                <p class="card-desc">Patrones y estructura recomendada por Google para apps escalables.</p>
+                <p class="card-desc">Patrones y estructura oficial recomendada por Google para apps escalables.</p>
                 <p class="card-link">
-                    <a href="https://developer.android.com/topic/architecture?hl=es-419" target="_blank" rel="noopener noreferrer">
+                    <a href="https://developer.android.com/topic/architecture?hl=es-419" target="_blank">
                         developer.android.com/topic/architecture
                     </a>
                 </p>
@@ -269,7 +243,7 @@
                 <p class="card-title">Koin con Jetpack Compose</p>
                 <p class="card-desc">Inyección de dependencias sencilla para proyectos con Compose.</p>
                 <p class="card-link">
-                    <a href="https://insert-koin.io/docs/quickstart/android-compose" target="_blank" rel="noopener noreferrer">
+                    <a href="https://insert-koin.io/docs/quickstart/android-compose" target="_blank">
                         insert-koin.io/.../android-compose
                     </a>
                 </p>
@@ -280,7 +254,7 @@
                 <p class="card-title">Kotlin Flow (Android)</p>
                 <p class="card-desc">Flujos asíncronos y reactivos en aplicaciones Android.</p>
                 <p class="card-link">
-                    <a href="https://developer.android.com/kotlin/flow?hl=es-419" target="_blank" rel="noopener noreferrer">
+                    <a href="https://developer.android.com/kotlin/flow?hl=es-419" target="_blank">
                         developer.android.com/kotlin/flow
                     </a>
                 </p>
@@ -289,9 +263,9 @@
             <div class="card">
                 <p class="pill">Kotlin</p>
                 <p class="card-title">Kotlin Flow (core)</p>
-                <p class="card-desc">Referencia de la API de Flow sin dependencias del framework Android.</p>
+                <p class="card-desc">API Flow sin dependencias del framework Android.</p>
                 <p class="card-link">
-                    <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/" target="_blank">
                         kotlinlang.org/.../flow
                     </a>
                 </p>
@@ -302,7 +276,7 @@
                 <p class="card-title">Agregar Firebase a Android</p>
                 <p class="card-desc">Guía oficial para integrar Firebase en tu proyecto Android.</p>
                 <p class="card-link">
-                    <a href="https://firebase.google.com/docs/android/setup?hl=es" target="_blank" rel="noopener noreferrer">
+                    <a href="https://firebase.google.com/docs/android/setup?hl=es" target="_blank">
                         firebase.google.com/docs/android/setup
                     </a>
                 </p>
@@ -311,9 +285,9 @@
             <div class="card">
                 <p class="pill">Firebase</p>
                 <p class="card-title">Firestore</p>
-                <p class="card-desc">Modelo de datos, consultas y buenas prácticas con Cloud Firestore.</p>
+                <p class="card-desc">Modelo de datos, consultas y ejemplos con Cloud Firestore.</p>
                 <p class="card-link">
-                    <a href="https://firebase.google.com/docs/firestore?hl=es" target="_blank" rel="noopener noreferrer">
+                    <a href="https://firebase.google.com/docs/firestore?hl=es" target="_blank">
                         firebase.google.com/docs/firestore
                     </a>
                 </p>
@@ -324,7 +298,7 @@
                 <p class="card-title">Room</p>
                 <p class="card-desc">Persistencia local con Room sobre SQLite.</p>
                 <p class="card-link">
-                    <a href="https://developer.android.com/training/data-storage/room?hl=es-419" target="_blank" rel="noopener noreferrer">
+                    <a href="https://developer.android.com/training/data-storage/room?hl=es-419" target="_blank">
                         developer.android.com/.../room
                     </a>
                 </p>
@@ -333,9 +307,9 @@
             <div class="card">
                 <p class="pill">UI</p>
                 <p class="card-title">Jetpack Compose</p>
-                <p class="card-desc">Documentación oficial para construir interfaces declarativas.</p>
+                <p class="card-desc">Construcción de interfaces declarativas modernas.</p>
                 <p class="card-link">
-                    <a href="https://developer.android.com/compose" target="_blank" rel="noopener noreferrer">
+                    <a href="https://developer.android.com/compose" target="_blank">
                         developer.android.com/compose
                     </a>
                 </p>
@@ -346,7 +320,7 @@
                 <p class="card-title">Documentación oficial Kotlin</p>
                 <p class="card-desc">Punto de entrada a todo el ecosistema del lenguaje Kotlin.</p>
                 <p class="card-link">
-                    <a href="https://kotlinlang.org/docs/home.html" target="_blank" rel="noopener noreferrer">
+                    <a href="https://kotlinlang.org/docs/home.html" target="_blank">
                         kotlinlang.org/docs/home.html
                     </a>
                 </p>
